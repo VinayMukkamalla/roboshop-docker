@@ -1,6 +1,7 @@
 services:
   mongodb:  # --name mongodb
     image: vinaydocker25/mongo:v1
+    container_name: mongodb
 
 networks:
   default:
