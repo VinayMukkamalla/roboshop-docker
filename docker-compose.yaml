@@ -1,0 +1,10 @@
+services:
+  mongodb:  # --name mongodb
+    image: vinaydocker25/mongo:v1
+
+networks:
+  default:
+    driver: bridge
+    name: roboshop
+    external: fasle # true if you have created network using docker network command; false if compose creates network
+
