@@ -12,4 +12,4 @@ USER_PORT="8080" \
 AMQP_HOST="rabbitq" \
 AMQP_USER="roboshop" \
 AMQP_PASS="roboshop123"
-CMD ["uwsgi", "--ini", "payment.ini"]
+CMD ["uwsgi","--ini","payment.ini"]
