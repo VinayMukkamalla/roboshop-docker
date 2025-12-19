@@ -71,7 +71,7 @@ networks:
     external: false # true if you have created network using docker network command; false if compose creates network
 
 volumes:
-  - mongodb: # docker volume create mongodb
-  - redis:
-  - mysql:
-  - rabbitmq:
+  mongodb: # docker volume create mongodb
+  redis:
+  mysql:
+  rabbitmq:
