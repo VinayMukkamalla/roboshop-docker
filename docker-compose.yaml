@@ -2,6 +2,8 @@ services:
   mongodb:  # --name mongodb
     image: vinaydocker25/mongo:v1
     container_name: mongodb
+    volumes:
+    - mongodb:/data/db
   catalogue:
     image: vinaydocker25/catalogue:v1
     container_name: catalogue
@@ -10,12 +12,18 @@ services:
   redis:
     image: redis:7.0
     container_name: redis
+    volumes:
+    - redis:/data
   mysql:
     image: vinaydocker25/mysql:v1
     container_name: mysql
+    volumes:
+    - mysql:/var/lib/mysql
   rabbitmq:
     image: rabbitmq:3
     container_name: rabbitmq
+    volumes:
+    - rabbitmq:/var/lib/rabbitmq
     environment:
       RABBITMQ_DEFAULT_USER: roboshop
       RABBITMQ_DEFAULT_PASS: roboshop123
@@ -62,3 +70,8 @@ networks:
     name: roboshop
     external: false # true if you have created network using docker network command; false if compose creates network
 
+volumes:
+  - mongodb: # docker volume create mongodb
+  - redis:
+  - mysql:
+  - rabbitmq:
